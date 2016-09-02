@@ -1,5 +1,5 @@
 /**
- * @author Hang Su <hangsu@gatech.edu>.
+ * @author Ting Pan <tpan35@gatech.edu>.
  */
 
 package edu.gatech.cse8803.graphconstruct
@@ -19,7 +19,7 @@ object GraphLoader {
   def load(patients: RDD[PatientProperty], labResults: RDD[LabResult],
            medications: RDD[Medication], diagnostics: RDD[Diagnostic]): Graph[VertexProperty, EdgeProperty] = {
 
-    /** HINT: See Example of Making Patient Vertices Below */
+   
 
     val sc = patients.sparkContext
 
@@ -50,11 +50,6 @@ object GraphLoader {
     val vertexLabResult = labVertexIdRDD.map{case(labname, index)=> (index, LabResultProperty(labname))}.asInstanceOf[RDD[(VertexId, VertexProperty)]]
 
 
-    /** HINT: See Example of Making PatientPatient Edges Below
-      *
-      * This is just sample edges to give you an example.
-      * You can remove this PatientPatient edges and make edges you really need
-      * */
     case class PatientPatientEdgeProperty(someProperty: SampleEdgeProperty) extends EdgeProperty
 
     val edgePatientPatient: RDD[Edge[EdgeProperty]] = patients
