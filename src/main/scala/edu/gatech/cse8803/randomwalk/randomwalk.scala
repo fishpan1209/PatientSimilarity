@@ -12,7 +12,6 @@ object RandomWalk {
       * For ties, random order is okay
     */
 
-    /** Remove this placeholder and implement your code */
     val patient = graph.vertices.filter(_._2.isInstanceOf[PatientProperty])
     val patient_count = patient.keys.max()
 
