@@ -1,6 +1,6 @@
 /**
 
-students: please put your implementation in this file!
+@author: Ting Pan <tpan35@gatech.edu>
   **/
 package edu.gatech.cse8803.jaccard
 
@@ -18,7 +18,7 @@ object Jaccard {
     For ties, random order is okay
     */
 
-    /** Remove this placeholder and implement your code */
+ 
 
     val neighbors = graph.collectNeighborIds(EdgeDirection.Either).map(x=>(x._1,x._2.filter(p=>p>1000))).filter(_._1<=1000)
     val neighbors_wo_patient = neighbors.filter(_._1!=patientID)
@@ -49,7 +49,7 @@ object Jaccard {
     If the union part is zero, then return 0.
     */
     
-    /** Remove this placeholder and implement your code */
+    
     val union: Double = (a ++ b).size
     val intersect: Double = a.intersect(b).size
     return (if (union==0) 0.0 else (intersect/union))
