@@ -1,5 +1,5 @@
 /**
- * @author Hang Su <hangsu@gatech.edu>.
+ * @author Ting Pan <tpan35@gatech.edu>.
  */
 package edu.gatech.cse8803.ioutils
 
